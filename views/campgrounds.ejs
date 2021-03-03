@@ -1,0 +1,21 @@
+
+<%- include('header/header.ejs'); -%>
+
+<title>Campgrounds</title>
+</head>
+
+<body class = 'container m-10'>
+    <h1 class="m-3">AllCampgrounds</h1>
+
+    <a href="/campground/new" class="btn btn-success m-4">Create New Campground</a>
+    <ol>
+    <% for(let c of campgrounds){%>
+            <li class="m-3">
+                <h2><%= c.title %> </h2>
+                <span class="text-primary"><%= c.location %></span>
+                <a href="/campground/<%= c._id %>" class="btn btn-primary btn-sm">Visit</a>
+            </li>
+    <% }  %> 
+    </ol>   
+</body>
+</html>

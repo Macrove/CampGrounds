@@ -1,0 +1,25 @@
+
+<%- include('header/header.ejs'); -%>
+
+<title>Edit Campground</title>
+</head>
+
+<body class = 'container'>
+    <h1>Edit Campground</h1>
+    <form action="/campground/<%= campground._id %>?_method=PUT" method="POST">
+        <div class="mb-3">
+            <label for="title">Campground Title</label>
+            <input type="text" id="title" placeholder="title" name="campground[title]" value="<%= campground.title %>">
+        </div>
+
+        <div class="mb-3">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="location" name="campground[location]" value="<%= campground.location %>">
+        </div>
+
+        <button class="btn btn-primary">Create</button>
+    </form>
+
+    <a href="/campground/<%= campground._id %>">Cancel</a>
+</body>
+</html>

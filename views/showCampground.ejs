@@ -1,0 +1,20 @@
+
+<%- include('header/header.ejs'); -%>
+
+<title><%= campground.title %> </title>
+</head>
+
+
+<body class = 'container'>
+    <h1><%= campground.title %> </h1>
+    <h2><%= campground.location %> </h2>
+    <a href="/campground" class="btn btn-link">Back to home</a> <br>
+    <form action="/campground/<%= campground._id %>/edit" method="GET">
+    <button class="btn btn-warning m-2">Update Campground</button>
+    </form>
+    <form action="/campground/<%= campground._id %>/delete?_method=DELETE" method="POST">
+        <button class="btn btn-danger m-2">Delete Campground</button>
+    </form>
+    
+</body>
+</html>

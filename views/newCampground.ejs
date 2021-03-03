@@ -1,0 +1,24 @@
+
+<%- include('header/header.ejs'); -%>
+
+<title>Create Campground</title>
+</head>
+
+<body class = 'container'>
+    <form action="/campground" method="POST">
+        <div class="mb-3">
+            <label for="title">Campground Title</label>
+            <input type="text" id="title" placeholder="title" name="campground[title]">
+        </div>
+
+        <div class="mb-3">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="location" name="campground[location]">
+        </div>
+
+        <button class="btn btn-primary">Create</button>
+    </form>
+
+    <a href="/campground">Cancel</a>
+</body>
+</html>
